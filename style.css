@@ -1,0 +1,70 @@
+body {
+    display: flex;
+    justify-content: space-around;
+}
+.chessTable {
+    width: 600px;
+    height: 600px;
+}
+.chessTable__header, .chessTable__footer {
+    display: flex;
+    justify-content: space-between;
+    height: 10%;
+    align-items: center;
+    background-color: grey;
+}
+.chessTable__footer__item, .chessTable__header__item {
+    width: 10%;
+    height: 100%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.chessTable__footer__item:first-child, .chessTable__header__item:first-child {
+    border-left: 1px solid black;
+}
+.chessBoard {
+    height: 80%;
+    display: flex;
+}
+.chessBoard__left, .chessBoard__right {
+    width: 10%;
+    background: gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.chessBoard__center {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: repeat(8,1fr);
+}
+.chessBoard__left__item, .chessBoard__right__item {
+    height: 12.5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+
+}
+.chessBoard__center__item-white, .chessBoard__center__item-black  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.chessBoard__center__item-white {
+    background: white;
+    color: black;
+}
+.chessBoard__center__item-black {
+    background: black;
+    color: white;
+}
